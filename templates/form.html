@@ -1,10 +1,27 @@
 <html>
-<h1>Hello there, trying to implement forms</h1>
-<form action="" method="post">
-  <p>
-    {{form.question1.label}}<br>
-    {{form.question1(size=30)}}
-  </p>
-</form>
-
+<head>
+    <title>Obesity Prediction Input</title>
+</head>
+<body>
+    <h1>Obesity Prediction Form</h1>
+    <form action="/" method="post">
+        <p>{{ form.CH2O.label }}<br>{{ form.CH2O(size=30) }}</p>
+        <p>{{ form.SCC.label }}<br>{{ form.SCC }}</p>
+        <p>{{ form.FAF.label }}<br>{{ form.FAF(size=30) }}</p>
+        <p>{{ form.TUE.label }}<br>{{ form.TUE(size=30) }}</p>
+        <p>{{ form.CALC.label }}<br>{{ form.CALC }}</p>
+        <p>{{ form.MTRANS.label }}<br>{{ form.MTRANS }}</p>
+        <p>{{ form.Gender.label }}<br>{{ form.Gender }}</p>
+        <p>{{ form.Age.label }}<br>{{ form.Age(size=30) }}</p>
+        <p>{{ form.Height.label }}<br>{{ form.Height(size=30) }}</p>
+        <p>{{ form.Weight.label }}<br>{{ form.Weight(size=30) }}</p>
+        <p>{{ form.family_history_with_overweight.label }}<br>{{ form.family_history_with_overweight }}</p>
+        <p>{{ form.FAVC.label }}<br>{{ form.FAVC }}</p>
+        <p>{{ form.FCVC.label }}<br>{{ form.FCVC(size=30) }}</p>
+        <p>{{ form.NCP.label }}<br>{{ form.NCP(size=30) }}</p>
+        <p>{{ form.CAEC.label }}<br>{{ form.CAEC }}</p>
+        <p>{{ form.SMOKE.label }}<br>{{ form.SMOKE }}</p>
+        <button type="submit">Submit</button>
+    </form>
+</body>
 </html>
