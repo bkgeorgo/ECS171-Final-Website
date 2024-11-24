@@ -1,10 +1,87 @@
 <html>
-<h1>Hello there, trying to implement forms</h1>
-<form action="" method="post">
+<h1>Our form</h1>
+<form action="/submit" method="post">
   <p>
-    {{form.question1.label}}<br>
-    {{form.question1(size=30)}}
+    {{form.gender.label}}<br>
+    {{form.gender(size=1)}}
   </p>
+
+  <p>
+    {{form.age.label}}<br>
+    {{form.age(size=5)}}
+  </p>
+
+  <p>
+    {{form.height.label}}<br>
+    {{form.height(size=5)}}
+  </p>
+
+  <p>
+    {{form.weight.label}}<br>
+    {{form.weight(size=5)}}
+  </p>
+
+  <p>
+    {{form.familyhistory.label}}<br>
+    {{form.familyhistory(size=1)}}
+  </p>
+
+  <p>
+    {{form.favc.label}}<br>
+    {{form.favc(size=1)}}
+  </p>
+
+  <p>
+    {{form.fcvc.label}}<br>
+    {{form.fcvc(size=1)}}
+  </p>
+
+  <p>
+    {{form.ncp.label}}<br>
+    {{form.ncp(size=1)}}
+  </p>
+
+  <p>
+    {{form.caec.label}}<br>
+    {{form.caec(size=1)}}
+  </p>
+
+  <p>
+    {{form.smoke.label}}<br>
+    {{form.smoke(size=1)}}
+  </p>
+
+  <p>
+    {{form.ch2o.label}}<br>
+    {{form.ch2o(size=5)}}
+  </p>
+
+  <p>
+    {{form.scc.label}}<br>
+    {{form.scc(size=1)}}
+  </p>
+
+  <p>
+    {{form.faf.label}}<br>
+    {{form.faf(size=5)}}
+  </p>
+
+  <p>
+    {{form.tue.label}}<br>
+    {{form.tue(size=5)}}
+  </p>
+
+  <p>
+    {{form.calc.label}}<br>
+    {{form.calc(size=1)}}
+  </p>
+
+  <p>
+    {{form.mtrans.label}}<br>
+    {{form.mtrans(size=1)}}
+  </p>
+  <button type="submit">Submit</button>
+
 </form>
 
 </html>
