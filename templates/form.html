@@ -1,4 +1,8 @@
 <html>
+
+<head>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
 <h1>Our form</h1>
 <form action="/submit" method="post">
   <p>
@@ -53,7 +57,7 @@
 
   <p>
     {{form.ch2o.label}}<br>
-    {{form.ch2o(size=5)}}
+    {{form.ch2o(size=1)}}
   </p>
 
   <p>
@@ -63,12 +67,12 @@
 
   <p>
     {{form.faf.label}}<br>
-    {{form.faf(size=5)}}
+    {{form.faf(size=1)}}
   </p>
 
   <p>
     {{form.tue.label}}<br>
-    {{form.tue(size=5)}}
+    {{form.tue(size=1)}}
   </p>
 
   <p>
