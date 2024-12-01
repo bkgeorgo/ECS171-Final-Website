@@ -1,2 +1,5 @@
 Flask
 Flask-WTF
+numpy
+xgboost
+pickle
