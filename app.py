@@ -65,3 +65,8 @@ def runModel(data):
     ]
     result = loaded_model.predict(np.array(data,dtype=object).reshape(-1,16))
     return nobeyesdad_mapping[result[0]]
+
+
+if __name__ == '__main__':
+    app.debug = True
+    app.run()
