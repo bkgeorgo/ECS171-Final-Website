@@ -1,9 +1,21 @@
 <html>
-
 <head>
-  <link rel="stylesheet" href="{{ url_for('static', filename='submit.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obesity Prediction Results</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<h1>hello</h1>
-<p>{{outcome}}</p>
-
+<body class="bg-light">
+    <div class="container my-5">
+        <div class="card shadow p-4">
+            <h1 class="text-center text-primary">Obesity Prediction Results</h1>
+            
+            <div class="alert alert-info mt-4">
+                <p><strong>Obesity Level:</strong> {{ obesity_label }}</p>
+                <p><strong>Details:</strong> Based on your input data, your predicted obesity level is classified as <strong>{{ obesity_label }}</strong>.</p>
+            </div>
+            
+            <a href="{{ url_for('homepage') }}" class="btn btn-primary mt-4">Go Back</a>
+        </div>
+    </div>
+</body>
 </html>
