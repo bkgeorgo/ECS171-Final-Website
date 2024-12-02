@@ -4,7 +4,7 @@
   <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <h1>Our form</h1>
-<form action="/submit" method="post">
+<form action="/" method="post">
   <p>
     {{form.gender.label}}<br>
     {{form.gender(size=1)}}
