@@ -4,3 +4,5 @@ run using `flask --app app run`
 ## Requirements
 `pip install Flask`
 `pip install Flask-WTF`
+`pip install numpy`
+`pip install xgboost`
