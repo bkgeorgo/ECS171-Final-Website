@@ -10,8 +10,25 @@
             <h1 class="text-center text-primary">Obesity Prediction Results</h1>
             
             <div class="alert alert-info mt-4">
-                <p><strong>Obesity Level:</strong> {{ obesity_label }}</p>
-                <p><strong>Details:</strong> Based on your input data, your predicted obesity level is classified as <strong>{{ obesity_label }}</strong>.</p>
+                {% set level = '' %}
+                {% if obesity_label == 0 %}
+                    {% set level = "Insufficient Weight" %}
+                {% elif obesity_label == 1 %}
+                    {% set level = "Normal Weight" %}
+                {% elif obesity_label == 2 %}
+                    {% set level = "Overweight Level I" %}
+                {% elif obesity_label == 3 %}
+                    {% set level = "Overweight Level II" %}
+                {% elif obesity_label == 4 %}
+                    {% set level = "Obesity Type I" %}
+                {% elif obesity_label == 5 %}
+                    {% set level = "Obesity Type II" %}
+                {% elif obesity_label == 6 %}
+                    {% set level = "Obesity Type III" %}
+                {% endif %}
+
+                <p><strong>Obesity Level:</strong> {{ level }}</p>
+                <p><strong>Details:</strong> Based on your input data, your predicted obesity level is classified as <strong>{{ level }}</strong>.</p>
             </div>
             
             <a href="{{ url_for('homepage') }}" class="btn btn-primary mt-4">Go Back</a>
