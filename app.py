@@ -59,9 +59,9 @@ def submit_form():
 
         question_data = {
             'Gender': int(form.gender.data),
-            'Age': math.log(int(form.age.data)),
-            'Height': math.log(float(form.height.data)),
-            'Weight': math.log(int(form.weight.data)),
+            'Age': int(form.age.data),
+            'Height': float(form.height.data),
+            'Weight': int(form.weight.data),
             'FAVC': int(form.favc.data),
             'FCVC': float(form.fcvc.data),
             'NCP': float(form.ncp.data),
@@ -80,11 +80,7 @@ def submit_form():
             'MTRANS_3': Mtrans_values[3],
             'MTRANS_4': Mtrans_values[4],
         }
-        #Using hardcoded values to standardize
-        question_data['Age'] = (question_data["Age"] - 2.63905733) * 0.98390003 + -2.59656858
-        question_data['Height'] = (question_data["Height"] - 0.37156356) * 3.20992985 + -1.19269295 
-        question_data['Weight'] = (question_data["Weight"] - 3.66356165) * 0.6712626 + -2.45921192
-        
+
         # Use model to predict
         obesity_label = model.predict([list(question_data.values())])[0]
         
