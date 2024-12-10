@@ -2,7 +2,7 @@
 
 CURRENTLY LIVE [HERE](https://ecs-171-final-website.vercel.app/ "Our site!")
 
-##To Run
+## To Run
 run using `flask --app app run`
 
 ## Requirements
