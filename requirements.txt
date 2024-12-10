@@ -3,3 +3,4 @@ Flask-WTF
 numpy
 xgboost
 sklearn
+scikit-learn
