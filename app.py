@@ -79,6 +79,10 @@ def submit_form():
             'MTRANS_3': Mtrans_values[3],
             'MTRANS_4': Mtrans_values[4],
         }
+        #Using hardcoded values to standardize
+        question_data['Age'] = (question_data["Age"] - 14.) * 0.0212766 + -0.29787234
+        question_data['Height'] = (question_data["Height"] - 1.45) * 1.9023595 + -2.75842127 
+        question_data['Weight'] = (question_data["Weight"] - 1.975663) * 0.0079329 + -0.30938319
         
         # Use model to predict
         obesity_label = model.predict([list(question_data.values())])[0]
