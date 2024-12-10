@@ -3,6 +3,7 @@ from flask_wtf import FlaskForm
 from wtforms import StringField,validators,SelectField,IntegerField, DecimalField
 import pickle
 import math
+import sklearn
 
 
 app = Flask(__name__)
