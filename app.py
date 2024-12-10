@@ -59,7 +59,7 @@ def submit_form():
         question_data = {
             'Gender': int(form.gender.data),
             'Age': int(form.age.data),
-            'Height': float(form.height.data),
+            'Height': float(form.height.data)*100,
             'Weight': int(form.weight.data),
             'FAVC': int(form.favc.data),
             'FCVC': float(form.fcvc.data),
