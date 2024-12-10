@@ -8,7 +8,7 @@ app = Flask(__name__)
 app.config["SECRET_KEY"] = 'mysecretkey'
 
 # Load the trained model
-with open("obesity_model.pkl", "rb") as f:
+with open("model.pkl", "rb") as f:
     model = pickle.load(f)
 
 class InputForm(FlaskForm):
