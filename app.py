@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, url_for, flash, redirect
 from flask_wtf import FlaskForm
 from wtforms import StringField,validators,SelectField,IntegerField, DecimalField
 import pickle
+import math
 
 
 app = Flask(__name__)
@@ -58,9 +59,9 @@ def submit_form():
 
         question_data = {
             'Gender': int(form.gender.data),
-            'Age': int(form.age.data),
-            'Height': float(form.height.data),
-            'Weight': int(form.weight.data),
+            'Age': math.log(int(form.age.data)),
+            'Height': math.log(float(form.height.data)),
+            'Weight': math.log(int(form.weight.data)),
             'FAVC': int(form.favc.data),
             'FCVC': float(form.fcvc.data),
             'NCP': float(form.ncp.data),
