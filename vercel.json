@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "functions": {
-    "api/app.py": {
-      "runtime": "@vercel/python"
+  "functions": {    
+    "api/**": {
+      "excludeFiles": "{.next,*.cache,node_modules,public,app}/**"
     }
   },
   "routes": [
