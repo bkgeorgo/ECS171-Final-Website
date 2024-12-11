@@ -1,45 +1,55 @@
 <html>
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Obesity Prediction Results</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body class="bg-light">
-    <div class="container my-5">
-        <div class="card shadow p-4">
-            <h1 class="text-center text-primary">Obesity Prediction Results</h1>
-            
-            <div class="alert alert-info mt-4">
-                {% set level = '' %}
-                {% set important_factors_message = '' %}
-                {% if obesity_label == 0 %}
-                    {% set level = "Insufficient Weight" %}
-                {% elif obesity_label == 1 %}
-                    {% set level = "Normal Weight" %}
-                {% elif obesity_label == 2 %}
-                    {% set level = "Overweight Level I" %}
-                {% elif obesity_label == 3 %}
-                    {% set level = "Overweight Level II" %}
-                {% elif obesity_label == 4 %}
-                    {% set level = "Obesity Type I" %}
-                    {% set important_factors_message = "These are the most important factors leading to obesity: high calorie intake, lack of physical activity, and poor dietary choices." %}
-                {% elif obesity_label == 5 %}
-                    {% set level = "Obesity Type II" %}
-                    {% set important_factors_message = "These are the most important factors leading to obesity: high calorie intake, lack of physical activity, and poor dietary choices." %}
-                {% elif obesity_label == 6 %}
-                    {% set level = "Obesity Type III" %}
-                    {% set important_factors_message = "These are the most important factors leading to obesity: high calorie intake, lack of physical activity, and poor dietary choices." %}
-                {% endif %}
 
-                <p><strong>Obesity Level:</strong> {{ level }}</p>
-                <p><strong>Details:</strong> Based on your input data, your predicted obesity level is classified as <strong>{{ level }}</strong>.</p>
-                {% if level.startswith('Obesity') %}
-                    <p class="text-danger"><strong>These are the most important factors leading to obesity: high calorie intake, lack of physical activity, and poor dietary choices.</strong></p>
-                {% endif %}
-            </div>
-            
-            <a href="{{ url_for('homepage') }}" class="btn btn-primary mt-4">Go Back</a>
-        </div>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Obesity Prediction Results</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+  <div class="container my-5">
+    <div class="card shadow p-4">
+      <h1 class="text-center text-primary">Obesity Prediction Results</h1>
+
+      <div class="alert alert-info mt-4">
+        {% set level = '' %}
+        {% set important_factors_message = '' %}
+        {% if obesity_label == 0 %}
+        {% set level = "Insufficient Weight" %}
+        {% elif obesity_label == 1 %}
+        {% set level = "Normal Weight" %}
+        {% elif obesity_label == 2 %}
+        {% set level = "Overweight Level I" %}
+        {% elif obesity_label == 3 %}
+        {% set level = "Overweight Level II" %}
+        {% elif obesity_label == 4 %}
+        {% set level = "Obesity Type I" %}
+        {% set important_factors_message = "These are the most important factors leading to obesity: high calorie
+        intake, lack of physical activity, and poor dietary choices." %}
+        {% elif obesity_label == 5 %}
+        {% set level = "Obesity Type II" %}
+        {% set important_factors_message = "These are the most important factors leading to obesity: high calorie
+        intake, lack of physical activity, and poor dietary choices." %}
+        {% elif obesity_label == 6 %}
+        {% set level = "Obesity Type III" %}
+        {% set important_factors_message = "These are the most important factors leading to obesity: high calorie
+        intake, lack of physical activity, and poor dietary choices." %}
+        {% endif %}
+
+        <p><strong>Obesity Level:</strong> {{ level }}</p>
+        <p><strong>Details:</strong> Based on your input data, your predicted obesity level is classified as <strong>{{
+            level }}</strong>.</p>
+        {% if level.startswith('Obesity') %}
+        <p class="text-danger"><strong>These are the most important factors leading to obesity:
+            1. High calorie intake
+            2. Lack of physical activity
+            3. Poor dietary choices.</strong></p>
+        {% endif %}
+      </div>
+
+      <a href="{{ url_for('homepage') }}" class="btn btn-primary mt-4">Go Back</a>
     </div>
+  </div>
 </body>
+
 </html>
